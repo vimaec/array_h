@@ -13,20 +13,20 @@ eliminating redudnancy of having to write different algorithms. It is also motiv
 
 The design goals for this library:
 
-    1. Provide an efficient abstraction that is similar to `std::vector` for usage when data is already
-        allocated in memory and there is no need to support dynamic growing or shrinking of the array.
+1. Provide an efficient abstraction that is similar to `std::vector` for usage when data is already
+allocated in memory and there is no need to support dynamic growing or shrinking of the array.
 
-    2. provide a compatible abstraction for functionally computed arrays that had O(1) memory consumption patterns
-        * continous monotonically increasing values
-        * repeated values
-        * random sequeneces
-        * maps
-        
-    3. provide compatibility in terms of style and API with STL algorithms and modern C++ programming techniques. 
-    
-    4. strive towards compliance with STL library, but not at cost of complexity and no need to support old versions of C++. Compare for example with https://github.com/martinmoene/span-lite/blob/master/include/nonstd/span.hpp
-    
-    5. minimize dependencies - enable programmers to get just the code they need without         
+2. provide a compatible abstraction for functionally computed arrays that had O(1) memory consumption patterns
+  * continous monotonically increasing values
+  * repeated values
+  * random sequeneces
+  * maps
+
+3. provide compatibility in terms of style and API with STL algorithms and modern C++ programming techniques. 
+
+4. strive towards compliance with STL library, but not at cost of complexity and no need to support old versions of C++. Compare for example with https://github.com/martinmoene/span-lite/blob/master/include/nonstd/span.hpp
+
+5. minimize dependencies - enable programmers to get just the code they need without         
        
         
 Each array data structure provide the same interface: `begin()`/`end()` for using range-based for loops, a `size()` function, and an
