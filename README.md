@@ -43,15 +43,15 @@ The primary data structures are:
 All data structures implement the following interface:
 
 ```
-	iterator begin() const { return _iter; }
-	size_type size() const { return _size; }
-	iterator end() const { return begin() + size(); }
-	const value_type& operator[](size_t n) const { return begin()[n]; }
-	bool empty() const { return size() == 0; }
+iterator begin() const { return _iter; }
+size_type size() const { return _size; }
+iterator end() const { return begin() + size(); }
+const value_type& operator[](size_t n) const { return begin()[n]; }
+bool empty() const { return size() == 0; }
 ```
 
 Additionally the non-readonly data structures implement the interface:
 
 ```
-	value_type& operator[](size_t n) { return begin()[n]; }
+value_type& operator[](size_t n) { return begin()[n]; }
 ```
