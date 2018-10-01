@@ -1,46 +1,7 @@
 /*
 	Ara 3d Array Library
-	Copyright 2018, Ara 3D
-	MIT Licenese
-
-	This is a header-only library of array data structures that providing a uniform array interface to different layouts 
-	of data in memory, as well as to purely computed data. This is a single header file with no other dependencies (including STL)
-	which means it is fast to compile, and easy to include in different projects. 
-
-	This library was motivated by a need to work with many different geometry and math libraries in an efficient way, while 
-	eliminating redudnancy of having to write different algorithms. 
-
-	The design goals for this library:
-
-		1. is to provide an efficient abstraction that is similar to std::vector for usage when data is already
-			allocated in memory and there is no need to support dynamic growing or shrinking of the array.
-
-		2. provide a compatible abstraction for functionally computed arrays that had O(1) memory consumption patterns
-			* continous monotonically increasing values
-			* repeated values
-			* random sequeneces
-			* maps
-
-	Each array data structure provide the same interface: begin()/end() for using range-based for loops, a size() function, and an
-	indexing operator. The iterators used are random-access forward only iterators. The data structures are compliant to a substantial 
-	subset of the standard. Full standards compliance is possible, but would make the code a lot harder to read, validate, and longer to 
-	compile. Only the array data structure allocates and deallocates memory for storage of elements.  
-	
-	All data structures have the same constructor signature:
-		begin - an iterator to the beginning of data 
-		size - the number of values in the array 
-
-	The primary data structures are: 
-		* array - an array container of contiguous data in memory with ownership semantics (derived from array_view)
-		* array_view - a view into contiguous memory without ownership semantics
-		* const_array_view - a readonly view of contiguous memory without ownership semantics
-		* array_slice - a wrapper that provides access to a range of values in an existing array view   
-		* const_array_stride - a readonly wrapper around an array that jumps over N elements at a time 
-		* array_mem_stride - an array of values in memory that are a fixed number of bytes apart	
-		* const_array_mem_stride - a read only array of values in memory that are a fixed number of bytes apart
-		* func_array - an array that generates values on demand using a function 
-
-	This library works well with "ara3d/array_ops.h" and "ara3d/geometry.h"
+	Copyright 2018, Ara 3D, Inc.
+	Usage licensed under terms of MIT Licenese
 */
 #pragma once
 
