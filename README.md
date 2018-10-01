@@ -4,7 +4,7 @@ A C++11 header-only library of array containers, views, and iterators that provi
 
 This is a single header file with no other dependencies (including STL) which means it is portable, fast to compile, and easy to include in different projects. 
 
-Unlike [`std::array`](https://en.cppreference.com/w/cpp/container/array) the size of `ara3d::array` is specified in the constructor. It is rare in practice that array sizes are known at compile time. The 'ara3d::array_view` is similar to [`stl::span`](https://en.cppreference.com/w/cpp/container/span) but permits writing of data elements. If read-only semantics are desired then the `ara3d::const_array_view` template is recommended.
+Unlike [`std::array`](https://en.cppreference.com/w/cpp/container/array) the size of `ara3d::array` is specified in the constructor. It is rare in practice that array sizes are known at compile time. The `ara3d::array_view` is similar to [`stl::span`](https://en.cppreference.com/w/cpp/container/span) but permits writing of data elements. If read-only semantics are desired then the `ara3d::const_array_view` structure can be used.
 
 ## Design Rationale 
 
